@@ -1,0 +1,18 @@
+<div class='calendar'>
+  <%= calendar_for(@news_cal) do |calendar| %>
+    <h2 id="month">
+      <%= link_to "<", controller: 'news', action: 'index', month: (@date.beginning_of_month-1) %>
+      <%= I18n.t("date.month_names")[@date.strftime("%m").to_i] %>
+      <%= link_to ">", controller: 'news', action: 'index', month: (@date.end_of_month+1) %>
+    </h2>
+    <%= calendar.head('Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб') %>
+    <% calendar.day(day_method: :date) do |date, nws| %>
+      <% if nws.count != 0 %>
+        <%= link_to date.day, news_index_path(date: (@date.to_date.beginning_of_month-1 + date.day), month: params[:month]) %>
+      <% else %>
+        <% date.day %>
+        <%= link_to date.day, news_index_path(date: (@date.to_date.beginning_of_month-1 + date.day), month: params[:month]) %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

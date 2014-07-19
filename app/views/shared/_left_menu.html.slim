@@ -1,0 +1,3 @@
+ul.nav.nav-list
+  - @left_items.each do |item|
+    li = link_to item.menu_name, pages_path(item)

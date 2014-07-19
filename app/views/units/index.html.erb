@@ -1,0 +1,14 @@
+<% if @units.length == 0 %>
+	<h1>Поиск</h1>
+	<p>Ничего не найдено, попробуйте уточнить параметры запроса!</p>
+<% else %>
+	<h1>Модули</h1>
+	<% @units.each do |unit| %>
+		<h2><%= link_to unit.name, unit %></h2>
+    <!--span><%= unit.date %></span-->
+    <p><%= unit.description %></p>
+	<hr>
+	<% end %>
+	<br><br>
+	<%= paginate @units %>
+<% end %>

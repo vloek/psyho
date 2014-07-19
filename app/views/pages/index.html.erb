@@ -1,0 +1,5 @@
+<% if flash[:notice] %>
+  <p class="welcome"><%= flash[:notice] %></p>
+<% end %>
+<h1><%= @page.head %></h1>
+<%= @page.body.html_safe %>

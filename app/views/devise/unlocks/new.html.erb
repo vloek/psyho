@@ -1,0 +1,13 @@
+<h2><%= t('simple_form.labels.user.unlock.resend') %></h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post, :class => 'form-horizontal'  }) do |f| %>
+  <%= f.error_notification %>
+  <%= f.full_error :unlock_token %>
+
+    <%= f.input :email, :required => true, :autofocus => true %>
+
+
+    <%= f.button :submit, t('simple_form.labels.user.unlock.send') %>
+<% end %>
+
+<%= render "devise/shared/links" %>

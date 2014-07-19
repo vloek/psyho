@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @unit.name %></h1>
+<p>
+  <strong>Описание:</strong>
+  <%= @unit.description %>
+</p>
+
+<p>
+  <% if @unit.file_attaches.present? %>
+    <% @unit.file_attaches.each do |obj| %>
+        <%= link_to "Скачать файл #{obj.version}", obj.file.url, class: 'btn btn-mini' %>
+    <% end %>
+  <% else %>
+    <%= link_to "Скачать файл",{:file=>@unit.file}, class: 'btn btn-mini' %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Размер:</strong>
+  <%= @unit.size %>
+</p>
+
+<p>
+  <strong>Версия:</strong>
+  <%= @unit.version %>
+</p>
+
+<p>
+  <strong>Дата добавления:</strong>
+  <%= @unit.date.try(:to_date) %>
+</p>
+
+<p>
+  <strong>Издатель:</strong>
+  <%= @unit.editor %>
+</p>
+
+<p>
+  <strong>Правообладатель:</strong>
+  <%= @unit.holders %>
+</p>
+

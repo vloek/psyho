@@ -1,0 +1,111 @@
+// Place all the styles related to the News controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.calendar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  table {
+    th {
+      font-weight: bold;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+
+  .month {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+p {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  line-height: 17px !important;
+  color: #111;
+}
+
+
+.news {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  .time {
+    font-size: 14px;
+    font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: rgb(129, 129, 129);
+  }
+
+  .header {
+    font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 33px;
+    padding: 0px;
+    color: black;
+  }  
+
+  .header_in_index {
+    font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    padding: 0px;
+    color: black;
+  }  
+
+  .anounce {
+    color: rgb(105, 105, 105);
+    font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+  }
+
+  .time_in_index {
+    font-family: pf_din_text_comp_proregular, Arial, sans-serif;
+    font-size: 27px;
+    color: black;
+    width: 100%;
+    height: 14px;
+    display: block;
+    border-bottom: 1px dotted #999;
+  }
+
+  span.rel {
+    position: relative;
+    top: 0em;
+    background: white;
+    padding-right: 10px;
+  }
+
+  .cont {
+    padding-left: 38px;
+  }
+}
+
+
+.calendar {
+
+  #month {
+    text-align: center;
+  }
+
+
+  table {
+    border: 1px solid #111;
+    th {
+      background: #174577;
+      border: 1px solid #275587;
+      color: white; 
+      padding: 5px;
+    }
+
+    td {
+      border: 1px solid #eee;
+    }
+  }
+}
+
+h1 {
+  color: black;
+  font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

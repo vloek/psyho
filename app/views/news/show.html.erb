@@ -1,0 +1,19 @@
+<% content_for(:header_title) do %>
+  <%= link_to "< назад к списку новостей", news_index_path, class: '' %>
+<% end %>
+
+<% content_for(:title) do %>
+  <%= @news.head %>
+<% end %>
+
+<div class='news shadowed' style="padding: 15px;">
+  <span class="time"><%= l @news.created_at, format: :long %></span>
+
+  <h2 class="header"><%= @news.head %></h2>
+  <p><%= @news.body %></p>
+  <br>
+  <hr>
+  <div class="right" style="text-align:right;">
+    <p class='time'>Последнее изменение: <%= l @news.updated_at, format: :long %></p>
+  </div>
+</div>

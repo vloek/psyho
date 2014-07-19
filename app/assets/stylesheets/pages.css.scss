@@ -1,0 +1,29 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.td-content {
+  //box-shadow: 0 0 10px rgba(150, 150, 150, 0.5);
+  border: 0 solid #000 !important;
+}
+
+.logo-text {
+  font-family: pf_din_text_comp_promedium, Arial, sans-serif !important;
+  font-size: 49px;
+  line-height: 36px;
+}
+
+
+
+.switchable_title.long {
+  display: none;
+}
+
+.b-header-text {
+  padding-top: 20px;
+}
+
+.b-header-logo {
+  height: 65px;
+}

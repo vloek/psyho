@@ -1,0 +1,27 @@
+<li class="news_anounce_element">
+    <div>
+      <div class="date">
+        <div class="day">
+          <%= l news_anounce.date, format: :day %>
+        </div>
+        <div class="month">
+          <%= l news_anounce.date, format: :month %>
+        </div>
+        
+        <div class="bot_arrow">
+        </div>
+      </div>
+      
+
+    </div>
+    
+    <div class='lining' style="width:220px !important">
+
+      <div class="anounce">
+        <%= link_to news_anounce  do %>
+          <%= news_anounce.anounce.truncate(90) %>
+        <% end %>
+      </div>
+    </div>
+</li>
+

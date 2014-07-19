@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  longname: MyString
+  size: 1
+  version: MyString
+  date: 2014-05-16 18:37:47
+  editor: MyString
+  holders: MyString
+  description: MyText
+
+two:
+  name: MyString
+  longname: MyString
+  size: 1
+  version: MyString
+  date: 2014-05-16 18:37:47
+  editor: MyString
+  holders: MyString
+  description: MyText

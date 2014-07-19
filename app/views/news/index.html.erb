@@ -1,0 +1,26 @@
+<% content_for :header_title  do %>
+  <h1>Новости</h1>
+<% end %>
+<!-- <h1>Новости</h1> -->
+
+<% if @news.to_a.size > 0 %>
+  <% @news.group_by { |item| item.date.to_date.strftime("%d %b") }.each_pair do |date, news| %>
+    <div class="news">
+      <span class="date">
+        <%= link_to  news_index_path(date: date), class: 'time_in_index' do %>
+          <span class="rel"><%= l date.to_date, format: :for_news %></span>
+        <% end %>
+      </span>
+    </div>
+    <% news.each do |n| %>
+      <%= render n %>
+    <% end %>
+
+  <% end %>
+
+  <br><br>
+
+  <%= paginate @news %>
+<% else %>
+  <p>В указанный период новостей нет</p>
+<% end %>
