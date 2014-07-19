@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  acts_as_ordered_tree
+ # acts_as_ordered_tree
   paginates_per 10
   has_many :units
   # gem introduces new ActiveRecord callbacks:
