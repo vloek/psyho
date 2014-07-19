@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  database: rsrails_development
+  password: professional
+
+
+test:
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  database: rsrails_test
